@@ -1,0 +1,33 @@
+
+
+<div class="container">
+    <h1>Student Data</h1>
+</div>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Registration Number</th>
+            <th scope="col">Email</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of stuList">
+            <td>{{student.fname}}</td>
+            <td>{{student.lname}}</td>
+            <td>{{student.rollNo}}</td>
+            <td>{{student.email}}</td>
+            <td><button class="btn btn-danger" (click)="deleteStudent(student)">Delete</button></td>
+            <td><button class="btn btn-success" (click)="showDetail(student)">Show Details</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      
+</div>
+
